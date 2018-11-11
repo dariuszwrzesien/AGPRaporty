@@ -1,0 +1,14 @@
+{
+  "name": "dwr-express-rest-api",
+  "version": "1.0.0",
+  "description": "Simple REST API",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dariusz Wrzesień",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "tedious": "^3.0.1"
+  }
+}
