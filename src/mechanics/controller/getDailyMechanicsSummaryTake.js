@@ -6,7 +6,10 @@ async function getDailyMechanicsSummaryTake(req, res) {
     try {
         const date = req.params.year + '-' + req.params.month + '-' + req.params.day;
         const data = await repository.getDailyMechanicsSummaryTake(date, req.params.branch);
-        return res.json(data.recordset);
+        if (data && data.recordset) {
+            return res.json(data.recordset);
+        }
+        return res.json([]);
     } catch (err) {
         console.error(err);
     }
