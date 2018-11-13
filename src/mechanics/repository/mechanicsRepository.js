@@ -16,8 +16,6 @@ function getDailyMechanicsSummaryTake(date, branch) {
                 ON [AcomNEX].[dbo].[nex_wyp_SerZlecenia].[zl_id]=[AcomNEX].[dbo].[nex_wyp_SerZleceniaPozycje].[zlp_zlid]
               WHERE zl_dataZamkniecia = '${date}'
               AND zl_nrroz = '${branch}'
-              AND zlp_mechanik != '.......... ..........'
-              AND zlp_mechanik != ' ..........  ..........'
             ) x
         GROUP BY zlp_mechanik`);
 }
@@ -32,8 +30,6 @@ function getMonthlyMechanicsSummaryTake(year, month, branch) {
                 WHERE zl_mc = '${month}'
                 AND zl_rok = ${year}
                 AND zl_nrroz = '${branch}'
-                AND zlp_mechanik != '.......... ..........'
-                AND zlp_mechanik != ' ..........  ..........'
             ) x
         GROUP BY zlp_mechanik`);
 }
